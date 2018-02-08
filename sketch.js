@@ -36,7 +36,29 @@ function draw() {
   ball2.move();
   ball3.move();
   ball4.move();
+
+  stroke(255);
+strokeWeight(4);
+noFill();
+
+if (mouseX <750)   {
+    fill (random(0, 255), random(0, 255), random(0, 255));
+    ellipse(500, 250, 150, 150)
+}  
+if (mouseX > 750) {
+    // fill(random(0, 255), random(0, 255), random(0, 255));
+    // ellipse(900, 500, 500, 500);
+        fill (random(0, 255), random(0, 255), random(0, 255));
+        ellipse (mouseX, mouseY, 150, 150);
+        }       
+
+if (500<mouseX<900) { var i=0;
+    for (var i=0; i<=width; i+=50) {
+        fill(random(0, 255), random(0, 255), random(0, 255));
+        ellipse(i,800, 25, 25) }
+    }
 }
+
 
 class Women{
     constructor(tempX, tempY, tempWidth, tempHeight, tempImg, tempSpeed){
